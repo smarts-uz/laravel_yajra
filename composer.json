@@ -1,0 +1,24 @@
+{
+  "name": "teamprodev/laravel_yajra",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "ArabicDev",
+      "email": "sardoryusupov230@gmail.com"
+    }
+  ],
+  "require": {},
+  "extra": {
+    "laravel": {
+      "providers": [
+        "YajraServiceProvider"
+      ]
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Teamprodev\\Yajra\\": "src/"
+    }
+  },
+  "minimum-stability": "stable"
+}
