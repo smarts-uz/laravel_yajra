@@ -5,9 +5,15 @@
     {
       "name": "ArabicDev",
       "email": "sardoryusupov230@gmail.com"
+    },
+    {
+      "name": "xeroctation",
+      "email": "umidakosimova.uk@gmail.com"
     }
   ],
-  "require": {},
+  "require": {
+    "yajra/laravel-datatables-oracle": "^9.*"
+  },
   "extra": {
     "laravel": {
       "providers": [

@@ -34,6 +34,6 @@ class YajraController extends Controller
                 ->make(true);
         }
 
-        return view('users');
+        return view('sample_datatable.users');
     }
 }
