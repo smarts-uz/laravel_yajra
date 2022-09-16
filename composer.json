@@ -11,7 +11,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "YajraServiceProvider"
+        "Teamprodev\\Yajra\\Providers\\YajraServiceProvider"
       ]
     }
   },
