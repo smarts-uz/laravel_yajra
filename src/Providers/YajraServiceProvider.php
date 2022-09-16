@@ -17,6 +17,7 @@ class YajraServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__ . '/../resources/views/components/' => base_path('resources/views/components'),
+            __DIR__ . '/../resources/views/layouts/' => base_path('resources/views/layouts'),
             __DIR__ . '/../View/Components/' => base_path('app/View/Components'),
             __DIR__ . '/../Http/Controllers/' => base_path('app/Http/Controllers'),
         ]);
