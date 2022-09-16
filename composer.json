@@ -11,9 +11,7 @@
       "email": "umidakosimova.uk@gmail.com"
     }
   ],
-  "require": {
-    "yajra/laravel-datatables-oracle": "10.0.0"
-  },
+  "require": {},
   "extra": {
     "laravel": {
       "providers": [
