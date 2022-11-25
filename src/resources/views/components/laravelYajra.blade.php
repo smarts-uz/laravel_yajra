@@ -81,7 +81,7 @@
             order: [[0, 'desc']],
             "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "{{ __('Все') }}"] ] ,
             pageLength: 10,
-            dom: 'Qlfrtip' + 'Bfrtip',
+            dom: {{$dom}},
 
             ajax: "{{$getData}}",
 

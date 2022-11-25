@@ -23,6 +23,6 @@
                 {data: 'action', name: 'action', orderable: false, searchable: false},
             ];
 </script>
-<x-laravelYajra getData="{{ route('users.index') }}" tableTitle="{{ __('Users') }}"/>
+<x-laravelYajra dom="'Qlfrtip' + 'Bfrtip'" getData="{{ route('users.index') }}" tableTitle="{{ __('Users') }}"></x-laravelYajra>
 
 </html>

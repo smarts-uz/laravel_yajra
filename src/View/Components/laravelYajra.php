@@ -14,11 +14,13 @@ class laravelYajra extends Component
      */
     public $tableTitle;
     public $getData;
+    public $dom;
 
     public function __construct($getData,$tableTitle)
     {
         $this->tableTitle = $tableTitle;
         $this->getData = $getData;
+        $this->dom = $dom;
     }
 
     /**
