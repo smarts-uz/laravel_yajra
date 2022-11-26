@@ -19,6 +19,7 @@ class YajraServiceProvider extends ServiceProvider
             __DIR__ . '/../resources/views/sample_datatable/' => base_path('resources/views/sample_datatable'),
             __DIR__ . '/../View/Components/' => base_path('app/View/Components'),
             __DIR__ . '/../Http/Controllers/' => base_path('app/Http/Controllers'),
+            __DIR__ . '/../Text/' => base_path('app/Text'),
         ]);
     }
 
