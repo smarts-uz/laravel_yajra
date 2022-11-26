@@ -7,6 +7,7 @@
             stateSave: true,
             {{$scrollY}}
             keys: {{$keys}},
+            rowReorder: {{$rowReorder}},
             scroller: {{$scroller}},
             responsive: {{$responsive}},
             select: {{$select}},
