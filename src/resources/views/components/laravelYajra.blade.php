@@ -5,6 +5,8 @@
         $('#example').DataTable( {
 
             stateSave: true,
+            {{$scrollY}}
+            scroller: {{$scroller}},
             responsive: {{$responsive}},
             select: {{$select}},
             order: [[0, 'desc']],

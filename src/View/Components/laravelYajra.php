@@ -23,8 +23,21 @@ class laravelYajra extends Component
     public string|bool $colReorder;
     public string|bool $responsive;
     public string|bool $select;
+    public string|int $scrollY;
+    public string|bool $scroller;
 
-    public function __construct(string $tableTitle = null, string $getData = null, bool $language = null, string $dom = 'Qlfrtip', int $pageLength = 10, bool $buttonLanguage = null, string|bool $colReorder = 'false', string|bool $responsive = 'false', string|bool $select = 'false')
+    public function __construct(string      $tableTitle = null,
+                                string      $getData = null,
+                                bool        $language = null,
+                                bool        $buttonLanguage = null,
+                                string      $dom = 'Qlfrtip',
+                                string|bool $select = 'false',
+                                string $responsive = 'false',
+                                string|bool $colReorder = 'false',
+                                int         $pageLength = 10,
+                                string|int $scrollY = null,
+                                string|bool $scroller = 'false',
+    )
     {
         $text = new text();
         $this->tableTitle = $tableTitle;
@@ -36,6 +49,8 @@ class laravelYajra extends Component
         $this->colReorder = $colReorder;
         $this->responsive = $responsive;
         $this->select = $select;
+        $this->scrollY = isset($scrollY) ? "scrollY:  $scrollY," : "";
+        $this->scroller = $scroller;
     }
     /**
      * Get the view / contents that represent the component.
