@@ -14,16 +14,17 @@ class laravelYajra extends Component
      *
      * @return void
      */
-    public $tableTitle;
-    public $getData;
-    public $language;
-    public $dom;
-    public $pageLength;
-    public $buttonLanguage;
-    public $colReorder;
-    public $responsive;
+    public string $tableTitle;
+    public string $getData;
+    public string $language;
+    public string $dom;
+    public int $pageLength;
+    public string $buttonLanguage;
+    public string|bool $colReorder;
+    public string|bool $responsive;
+    public string|bool $select;
 
-    public function __construct(string $tableTitle = null,$getData = null,$language = null,$dom = 'Qlfrtip',$pageLength = 10,$buttonLanguage = null,$colReorder = 'false',$responsive = 'false')
+    public function __construct(string $tableTitle = null, string $getData = null, bool $language = null, string $dom = 'Qlfrtip', int $pageLength = 10, bool $buttonLanguage = null, string|bool $colReorder = 'false', string|bool $responsive = 'false', string|bool $select = 'false')
     {
         $text = new text();
         $this->tableTitle = $tableTitle;
@@ -34,6 +35,7 @@ class laravelYajra extends Component
         $this->buttonLanguage = isset($buttonLanguage) ? $text->language_button($tableTitle) : $buttonLanguage;
         $this->colReorder = $colReorder;
         $this->responsive = $responsive;
+        $this->select = $select;
     }
     /**
      * Get the view / contents that represent the component.
