@@ -25,6 +25,7 @@ class laravelYajra extends Component
     public string|bool $select;
     public string|int $scrollY;
     public string|bool $scroller;
+    public string|bool $keys;
 
     public function __construct(string      $tableTitle = null,
                                 string      $getData = null,
@@ -37,6 +38,7 @@ class laravelYajra extends Component
                                 int         $pageLength = 10,
                                 string|int $scrollY = null,
                                 string|bool $scroller = 'false',
+                                string|bool $keys = 'false',
     )
     {
         $text = new text();
@@ -51,6 +53,7 @@ class laravelYajra extends Component
         $this->select = $select;
         $this->scrollY = isset($scrollY) ? "scrollY:  $scrollY," : "";
         $this->scroller = $scroller;
+        $this->keys = $keys;
     }
     /**
      * Get the view / contents that represent the component.

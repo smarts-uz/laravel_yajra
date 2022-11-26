@@ -6,6 +6,7 @@
 
             stateSave: true,
             {{$scrollY}}
+            keys: {{$keys}},
             scroller: {{$scroller}},
             responsive: {{$responsive}},
             select: {{$select}},
