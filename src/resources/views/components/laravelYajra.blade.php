@@ -8,6 +8,7 @@
             {{$scrollY}}
             keys: {{$keys}},
             rowReorder: {{$rowReorder}},
+            rowGroup: {{$rowGroup}},
             scroller: {{$scroller}},
             responsive: {{$responsive}},
             select: {{$select}},
