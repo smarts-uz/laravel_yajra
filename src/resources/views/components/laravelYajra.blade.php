@@ -1,24 +1,23 @@
+
 <script>
     $(document).ready(function() {
         $.fn.dataTable.moment('DD-MM-YYYY');
 
         $('#example').DataTable( {
 
-            stateSave: true,
-            {{$scrollY}}
             keys: {{$keys}},
             rowReorder: {{$rowReorder}},
             rowGroup: {{$rowGroup}},
-            scroller: {{$scroller}},
             responsive: {{$responsive}},
             select: {{$select}},
             order: [[0, 'desc']],
+            colReorder: {{$colReorder}},
             "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "{{ __('Все') }}"] ] ,
             "pagingType": "{{$pagingType}}",
-            colReorder: {{$colReorder}},
             pageLength: {{$pageLength}},
-            {!! $languageRu !!}
-            dom: {{$dom}},
+            "language" : {!! $language !!},
+
+            dom: "{{$dom}}",
             ajax: "{{$getData}}",
             {!! $buttonLanguage !!}
 

@@ -32,7 +32,7 @@ class laravelYajra extends Component
 
     public function __construct(string      $tableTitle = null,
                                 string      $getData = null,
-                                bool        $language = null,
+                                string        $language = 'en-GB',
                                 bool        $buttonLanguage = null,
                                 string      $dom = 'Qlfrtip',
                                 string|bool $select = 'false',
@@ -50,7 +50,7 @@ class laravelYajra extends Component
         $text = new text();
         $this->tableTitle = $tableTitle;
         $this->getData = $getData;
-        $this->language = isset($language) ? $text->language() : $language;
+        $this->language = isset($language) ? $text->language($language) : $language;
         $this->dom = $dom;
         $this->pageLength = $pageLength;
         $this->buttonLanguage = isset($buttonLanguage) ? $text->language_button($tableTitle) : $buttonLanguage;
