@@ -85,7 +85,7 @@ public function language_ru() : string
                     },
                     "value": "Значение"
                 },
-            }';
+            },';
 }
 
 }
