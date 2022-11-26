@@ -7,7 +7,7 @@
             stateSave: true,
             order: [[0, 'desc']],
             "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "{{ __('Все') }}"] ] ,
-            pageLength: 10,
+            pageLength: {{$pageLength}},
             {!! $languageRu !!},
             dom: {{$dom}},
             ajax: "{{$getData}}",
