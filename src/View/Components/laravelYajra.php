@@ -28,6 +28,7 @@ class laravelYajra extends Component
     public string|bool $keys;
     public string|bool $rowReorder;
     public string|bool $rowGroup;
+    public string $pagingType;
 
     public function __construct(string      $tableTitle = null,
                                 string      $getData = null,
@@ -43,6 +44,7 @@ class laravelYajra extends Component
                                 string|bool $keys = 'false',
                                 string|bool $rowReorder = 'false',
                                 string|bool $rowGroup = 'false',
+                                string $pagingType = 'simple_numbers',
     )
     {
         $text = new text();
@@ -60,6 +62,7 @@ class laravelYajra extends Component
         $this->keys = $keys;
         $this->rowReorder = $rowReorder;
         $this->rowGroup = $rowGroup;
+        $this->pagingType = $pagingType;
     }
     /**
      * Get the view / contents that represent the component.
