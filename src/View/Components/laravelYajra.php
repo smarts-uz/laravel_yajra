@@ -20,8 +20,9 @@ class laravelYajra extends Component
     public $dom;
     public $pageLength;
     public $buttonLanguage;
+    public $colReorder;
 
-    public function __construct(string $tableTitle = null,$getData = null,$language = null,$dom = 'Qlfrtip',$pageLength = 10,$buttonLanguage = null)
+    public function __construct(string $tableTitle = null,$getData = null,$language = null,$dom = 'Qlfrtip',$pageLength = 10,$buttonLanguage = null,$colReorder = 'false')
     {
         $text = new text();
         $this->tableTitle = $tableTitle;
@@ -30,6 +31,7 @@ class laravelYajra extends Component
         $this->dom = $dom;
         $this->pageLength = $pageLength;
         $this->buttonLanguage = isset($buttonLanguage) ? $text->language_button($tableTitle) : $buttonLanguage;
+        $this->colReorder = $colReorder;
     }
     /**
      * Get the view / contents that represent the component.
