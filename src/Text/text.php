@@ -5,15 +5,102 @@ namespace App\Text;
 
 class text {
 
-public $language_ru;
-public function __construct()
-{
-    $this->language_ru = $this->language_ru();
-}
+    public $language;
 
-public function language_ru() : string
-{
-    return '"language": {
+    public function language_button($tableTitle)
+    {
+        $copy = '<i class="fas fa-copy"></i>';
+        $excel = '<i class="fas fa-file-excel"></i>';
+        $pdf = '<i class="fas fa-file-pdf"></i>';
+        $print = '<i class="fas fa-print"></i>';
+        $eye = '<i class="fas fa-eye"></i>';
+        return "buttons: {
+                buttons: [
+                    { extend: 'copyHtml5',
+                        text: '$copy',
+                        title: '$tableTitle',
+                        titleAttr: 'Скопировать в буфер обмена',
+                        exportOptions: {
+                            columns: ':visible:Not(.not-exported)',
+                            rows: ':visible',
+                            format:{
+                                header: function ( data, columnIdx ) {
+                                    if(typeof export_format === 'function')
+                                        return export_format(data, columnIdx);
+                                    return data;
+                                }
+                            }
+                        },
+                    },
+                    { extend: 'excelHtml5',
+                        text: '$excel',
+                        title: '$tableTitle',
+                        titleAttr: 'Экспорт в Excel',
+                        exportOptions: {
+                            columns: ':visible:Not(.not-exported)',
+                            rows: ':visible',
+                            format:{
+                                header: function ( data, columnIdx ) {
+                                    if(typeof export_format === 'function')
+                                        return export_format(data, columnIdx);
+                                    return data;
+                                }
+                            }
+                        },
+                    },
+                    { extend: 'pdfHtml5',
+                        text: '$pdf',
+                        title: '$tableTitle',
+                        titleAttr: 'Экспорт в PDF',
+                        orientation: 'landscape',
+                        pageSize: 'LEGAL',
+                        exportOptions: {
+                            columns: ':visible:Not(.not-exported)',
+                            rows: ':visible',
+                            format:{
+                                header: function ( data, columnIdx ) {
+                                    if(typeof export_format === 'function')
+                                        return export_format(data, columnIdx);
+                                    return data;
+                                }
+                            }
+                        },
+                    },
+                    { extend: 'print',
+                        text: '$print',
+                        title: '$tableTitle',
+                        titleAttr: 'Распечатать',
+                        exportOptions: {
+                            columns: ':visible:Not(.not-exported)',
+                            rows: ':visible',
+                            format:{
+                                header: function ( data, columnIdx ) {
+                                    if(typeof export_format === 'function')
+                                        return export_format(data, columnIdx);
+                                    return data;
+                                }
+                            }
+                        },
+                    },
+                    { extend: 'colvis',
+                        text: '$eye',
+                        titleAttr: 'Показать/скрыть колонки',
+                        exportOptions: {
+                            columns: ':visible:Not(.not-exported)',
+                            rows: ':visible',
+                        },
+                    }
+                ],
+                dom: {
+                    button: {
+                        className: 'dt-button'
+                    }
+                }
+            },";
+    }
+    public function language() : string
+    {
+        return '"language": {
                 "lengthMenu": "Показать _MENU_ записей",
                 "info":      "Показаны записи в диапазоне от _START_ до _END_ (В общем _TOTAL_)",
                 "search":  "Поиск",
@@ -86,7 +173,7 @@ public function language_ru() : string
                     "value": "Значение"
                 },
             },';
-}
+    }
 
 }
 

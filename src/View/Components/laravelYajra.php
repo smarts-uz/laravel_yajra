@@ -16,18 +16,20 @@ class laravelYajra extends Component
      */
     public $tableTitle;
     public $getData;
-    public $languageRu;
+    public $language;
     public $dom;
     public $pageLength;
+    public $buttonLanguage;
 
-    public function __construct($tableTitle,$getData,$languageRu = null,$dom = 'Qlfrtip',$pageLength = 10)
+    public function __construct(string $tableTitle = null,$getData = null,$language = null,$dom = 'Qlfrtip',$pageLength = 10,$buttonLanguage = null)
     {
         $text = new text();
-        $this->languageRu = isset($languageRu) ? $text->language_ru() : $languageRu;
         $this->tableTitle = $tableTitle;
         $this->getData = $getData;
+        $this->language = isset($language) ? $text->language() : $language;
         $this->dom = $dom;
         $this->pageLength = $pageLength;
+        $this->buttonLanguage = isset($buttonLanguage) ? $text->language_button($tableTitle) : $buttonLanguage;
     }
     /**
      * Get the view / contents that represent the component.
