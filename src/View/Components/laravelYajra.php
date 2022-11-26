@@ -16,7 +16,7 @@ class laravelYajra extends Component
     public $getData;
     public $dom;
 
-    public function __construct($getData,$tableTitle)
+    public function __construct($getData,$tableTitle,$dom)
     {
         $this->tableTitle = $tableTitle;
         $this->getData = $getData;
