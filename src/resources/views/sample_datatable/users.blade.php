@@ -1,5 +1,3 @@
-@include('layouts.datatables')
-
 <div class="container">
     <table id="example" class="table table-bordered data-table">
         <thead>
